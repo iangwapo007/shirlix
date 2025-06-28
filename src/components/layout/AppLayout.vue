@@ -10,7 +10,7 @@ function onClick() {
 </script>
 
 <template>
-  <v-responsive class="border rounded">
+  <v-responsive>
     <v-app :theme="theme">
       <v-app-bar class="px-3" :color="theme === 'light' ? 'grey-lighten-1' : 'grey-darken-3'" app>
         <v-spacer></v-spacer>
