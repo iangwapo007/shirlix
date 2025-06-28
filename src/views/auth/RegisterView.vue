@@ -10,7 +10,7 @@ import RegisterForm from '@/components/auth/RegisterForm.vue'
         <v-col cols="12" md="6" class="mx-auto mt-16">
           <v-card class="mx-auto">
             <v-card-title class="text-center">
-              <v-img src="/public/logo.png" height="270"></v-img>
+              <v-img src="/public/logo.png" height="200"></v-img>
               <h3 class="font-weight-black">Shirlix Meatshop</h3>
               <p>Register Form</p>
             </v-card-title>
