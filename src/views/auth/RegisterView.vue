@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue'
-import { RouterLink } from 'vue-router'
 
 const theme = ref('light')
 
@@ -12,6 +11,7 @@ function onClick() {
 <template>
   <v-responsive class="border rounded">
     <v-app :theme="theme">
+      <!-- NAVBAR -->
       <v-app-bar class="px-3" color="grey-lighten-1">
         <v-spacer></v-spacer>
 
@@ -27,29 +27,53 @@ function onClick() {
         <v-container>
           <v-row>
             <v-col cols="12" md="6" class="mx-auto mt-16">
-              <v-card class="mx-auto" prepend-icon="mdi-login" subtitle="Login">
+              <v-card class="mx-auto" prepend-icon="mdi-account-plus" subtitle="Register">
                 <template v-slot:title>
                   <span class="font-weight-black">Shirlix Meatshop</span>
                 </template>
 
                 <v-card-text class="bg-surface-light pt-4">
+                  <!-- INPUT FORM -->
                   <v-form fast-fail @submit.prevent>
+                    <v-row>
+                      <v-col>
+                        <!-- FIRSTNAME FIELD -->
+                        <v-text-field label="Firstname" variant="outlined"></v-text-field>
+                      </v-col>
+                      <v-col>
+                        <!-- LASTNAME FIELD -->
+                        <v-text-field label="Lastname" variant="outlined"></v-text-field>
+                      </v-col>
+                    </v-row>
+
+                    <!-- EMAIL FIELD -->
                     <v-text-field label="Email" variant="outlined"></v-text-field>
 
-                    <v-text-field
-                      label="Password"
-                      type="password"
-                      variant="outlined"
-                    ></v-text-field>
+                    <v-row>
+                      <v-col>
+                        <!-- PASSWORD FIELD -->
+                        <v-text-field
+                          label="Password"
+                          type="password"
+                          variant="outlined"
+                        ></v-text-field
+                      ></v-col>
+                      <v-col>
+                        <!-- CONFIRM PASSWORD FIELD -->
+                        <v-text-field
+                          label="Confirm Password"
+                          type="password"
+                          variant="outlined"
+                        ></v-text-field
+                      ></v-col>
+                    </v-row>
 
                     <v-btn class="mt-2" type="submit" block>Submit</v-btn>
                   </v-form>
-
                   <v-divider class="my-5"></v-divider>
-
                   <h5 class="pb-2 text-center">
-                    Dont have an Account?
-                    <RouterLink to="/register">Click here to register</RouterLink>
+                    Already have an account?
+                    <RouterLink to="/">Click here to Login</RouterLink>
                   </h5>
                 </v-card-text>
               </v-card>
