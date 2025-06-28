@@ -10,7 +10,7 @@ import AppLayout from '@/components/layout/AppLayout.vue'
         <v-col cols="12" md="6" class="mx-auto mt-16">
           <v-card class="mx-auto">
             <v-card-title class="text-center">
-              <v-img src="/public/logo.png" height="200"></v-img>
+              <v-img src="/public/images/logo.png" height="200"></v-img>
               <h3 class="font-weight-black">Shirlix Meatshop</h3>
               <p>Login Form</p>
             </v-card-title>
